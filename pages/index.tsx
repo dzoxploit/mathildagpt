@@ -4,7 +4,6 @@ import { ClipLoader } from "react-spinners";
 
 // Define a default function component called Home
 export default function Home() {
-
   // Define three state variables for the original text, paraphrased text, and paraphrase mode
   const [originalText, setOriginalText] = useState<string>("");
   const [paraphrasedText, setParaphrasedText] = useState<string>("");
@@ -23,7 +22,7 @@ export default function Home() {
   const handleParaphrase = async (e: React.FormEvent) => {
     // Prevent form submission if original text is empty
     if (!originalText) {
-      toast.error("Enter text to paraphrase!");
+      toast.error("Enter text untuk parafrase!");
       return;
     }
 
@@ -51,14 +50,15 @@ export default function Home() {
     setLoading(false);
   };
 
-
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100">
       <main className="max-w-2xl w-full bg-white rounded-lg shadow-md p-6 mb-4">
-        <h1 className="text-4xl font-bold mb-4">AI Paraphrasing Tool</h1>
+        <h1 className="text-4xl font-bold mb-4">
+          MathildaGPT Paraphrasing Tool
+        </h1>
         <p className="text-sm mb-8">
-          Enter the text you want to paraphrase below, select a paraphrase mode,
-          and click on the Paraphrase button to see the results!
+          Masukan Text yang ingin diubah Phraprasenya dan Voila Skripsi anda
+          sudah tidak terlalu keliatan Plagiatrisme nya :V!
         </p>
         <div className="mb-4">
           <textarea
@@ -83,9 +83,9 @@ export default function Home() {
             onChange={(e) => setParaphraseMode(e.target.value)}
             className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           >
-            <option value="Standard">Standard</option>
+            <option value="Standard">Standar</option>
             <option value="Formal">Formal</option>
-            <option value="Creative">Creative</option>
+            <option value="Creative">Kreatif</option>
             <option value="Fun">Fun</option>
             <option value="Fluent">Fluent</option>
           </select>
@@ -144,7 +144,7 @@ export default function Home() {
         )}
       </main>
       <footer className="text-gray-600 text-center text-md mt-2">
-        Built with Next.js, Tailwind CSS, and OpenAI
+        Built with Mathilda Nur Pragos and OpenAI
       </footer>
     </div>
   );
